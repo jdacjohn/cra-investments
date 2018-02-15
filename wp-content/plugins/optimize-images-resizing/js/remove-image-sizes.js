@@ -1,74 +1,125 @@
 jQuery( function( $ ) {
 
-	"use strict";
+  "use strict";
 
-	var $body    = $( 'body' ),
-		$button  = $( '#oir-remove-image-sizes' ),
-		$message = $( '#oir-status-message' );
+  var $body = $( 'body' ),
+    $button_new_cleanup = $( '#oir-remove-image-sizes' ),
+    $button_old_cleanup = $( '#oir-resume-remove-image-sizes' ),
+    $buttons = $( '#oir-buttons' ),
+    $message = $( '#oir-status-message' ),
+    $log = $( '#oir-log' ),
+    record_log = false;
 
-	$button.on( 'click', function( e ) {
+  $button_new_cleanup.on( 'click', function( e ) {
 
-		e.preventDefault();
+    e.preventDefault();
 
-		$button.hide();
-		$message
-			.html( 'Cleanup in progress, leave this page open!' )
-			.show();
+    $buttons.hide();
+    $message
+      .html( oir_plugin.l10n.cleanup_progress )
+      .show();
 
-		ajax_request();
+    record_log = $( '#oir-keep-the-log' ).is( ':checked' );
 
-	});
+    ajax_request();
 
-	function ajax_request( paged ) {
+  });
 
-		paged = 'undefined' == typeof paged ? 1 : parseInt( paged, 10 );
+  $button_old_cleanup.on( 'click', function( e ) {
 
-		$.post(
-			ajaxurl,
-			{
-				action : 'oir_remove_image_sizes',
-				nonce  : oir_plugin.nonce,
-				paged  : paged
-			},
-			function( response ) {
-				
-				if ( false === response.success ) {
+    e.preventDefault();
 
-					$message
-						.html( oir_plugin.l10n.something_wrong )
-						.show();
+    $buttons.hide();
+    $message
+      .html( oir_plugin.l10n.cleanup_progress )
+      .show();
 
-				} else if ( true === response.success ) {
+    record_log = $( '#oir-keep-the-log' ).is( ':checked' );
 
-					if ( true === response.finished ) {
+    var page = parseInt( $button_old_cleanup.attr( 'data-page' ), 10 );
 
-						$message
-							.html( oir_plugin.l10n.process_finished );
+    ajax_request( page );
 
-					} else {
+  });
 
-						var completed = ( response.paged * 10 > response.found ) ? response.found : response.paged * 10;
+  $body.on( 'click', '.js-oir-show-log', function( e ) {
 
-						$message
-							.html( oir_plugin.l10n.cleanup_progress + ' ' + completed + ' / ' + response.found );
+    e.preventDefault();
 
-						ajax_request( ++response.paged );
+    $log.stop().slideToggle();
 
+  });
 
-					}					
+  function ajax_request( paged, removed ) {
 
-				} else {
+    paged = 'undefined' == typeof paged ? 1 : parseInt( paged, 10 );
+    removed = 'undefined' == typeof removed ? 0 : parseInt( removed, 10 );
 
-					$message
-						.html( oir_plugin.l10n.something_wrong )
-						.show();
+    $.post(
+      ajaxurl,
+      {
+        action: 'oir_remove_image_sizes',
+        nonce: oir_plugin.nonce,
+        paged: paged,
+        removed: removed,
+        record_log: record_log
+      },
+      function( response ) {
 
-				}
+        if ( true !== response.success ) {
 
-			},
-			'json'
-		);
+          // Looks like something went wrong
 
-	}
+          $message
+            .html( oir_plugin.l10n.something_wrong )
+            .show();
+
+          return;
+
+        }
+
+        if ( true === response.finished ) {
+
+          // Cleanup has finished
+
+          var message = 0 === parseInt( response.removed, 10 ) ? oir_plugin.l10n.nothing_to_remove : oir_plugin.l10n.process_finished.replace( '%d', '<a href="#" class="js-oir-show-log">' + response.removed + '</a>' );
+
+          $message
+            .html( message );
+
+          if ( record_log && 0 !== parseInt( response.removed, 10 ) && response.removed_log.length ) {
+
+            var logHtml = '<pre>';
+
+            $.each( response.removed_log, function( i, file ) {
+
+              logHtml += file + '\n';
+
+            });
+
+            logHtml += '</pre>';
+
+            $log.html( logHtml )
+
+          }
+
+          return;
+
+        }
+
+        // Cleanup still in progress
+
+        var completed = ( response.paged * 10 > response.found ) ? response.found : response.paged * 10;
+
+        $message
+          .html( oir_plugin.l10n.cleanup_progress + ' ' + completed + ' / ' + response.found );
+
+        ajax_request( ++response.paged, response.removed );
+
+      },
+      'json'
+    );
+
+  }
 
 });

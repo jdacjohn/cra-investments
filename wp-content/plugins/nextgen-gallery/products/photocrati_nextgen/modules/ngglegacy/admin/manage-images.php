@@ -12,18 +12,24 @@ function nggallery_picturelist($controller) {
 
     $wp_list_table = new _NGG_Images_List_Table('nggallery-manage-images');
 
-    if ($is_search) {
+	// look for pagination
+	$_GET['paged'] = isset($_GET['paged']) && ($_GET['paged'] > 0) ? absint($_GET['paged']) : 1;
+	$items_per_page = (!empty($_GET['items']) ? $_GET['items'] : apply_filters('ngg_manage_images_items_per_page', 50));
+	if ($items_per_page == 'all')
+		$items_per_page = PHP_INT_MAX;
+	else
+		$items_per_page = (int)$items_per_page;
 
+    if ($is_search)
+    {
 		// fetch the imagelist
 		$picturelist = $ngg->manage_page->search_result;
+	    $total_number_of_images = count($picturelist);
 
 		// we didn't set a gallery or a pagination
-		$act_gid     = 0;
-		$_GET['paged'] = 1;
-		$page_links = false;
-
-	} else {
-
+		$act_gid = 0;
+	}
+    else {
 		// GET variables
 		$act_gid    = $ngg->manage_page->gid;
 
@@ -42,13 +48,6 @@ function nggallery_picturelist($controller) {
 			return;
 		}
 
-		// look for pagination
-        $_GET['paged'] = isset($_GET['paged']) && ($_GET['paged'] > 0) ? absint($_GET['paged']) : 1;
-        $items_per_page = (!empty($_GET['items']) ? $_GET['items'] : apply_filters('ngg_manage_images_items_per_page', 50));
-        if ($items_per_page == 'all')
-            $items_per_page = PHP_INT_MAX;
-        else
-            $items_per_page = (int)$items_per_page;
         $start = ( $_GET['paged'] - 1 ) * $items_per_page;
 
 		// get picture values
@@ -164,7 +163,7 @@ jQuery(function (){
       jQuery('#spinner').fadeIn();
       jQuery('#spinner').position({ my: "center", at: "center", of: container });
 
-      var dialog = jQuery('<div class="ngg-overlay-dialog" style="display:hidden"></div>').appendTo('body');
+      var dialog = jQuery('<div class="ngg-overlay-dialog"></div>').appendTo('body');
       // load the remote content
       dialog.load(
           this.href,
@@ -187,6 +186,14 @@ jQuery(function (){
       //prevent the browser to follow the link
       return false;
     });
+
+	// If too many of these are generated the cookie becomes so large servers will reject HTTP requests
+	// Wait some time for other listeners to catch this event and then purge it from the browser
+	Frame_Event_Publisher.listen_for('attach_to_post:thumbnail_modified', function(data) {
+		setTimeout(function() {
+			Frame_Event_Publisher.delete_cookie("X-Frame-Events_" + data.id);
+		}, 400);
+	});
 });
 
 function checkAll(form)
@@ -294,7 +301,6 @@ jQuery(document).ready( function($) {
 //-->
 </script>
 <div class="wrap">
-<?php screen_icon( 'nextgen-gallery' ); ?>
 <?php if ($is_search) :?>
 <h2><?php printf( __('Search results for &#8220;%s&#8221;', 'nggallery'), esc_html( get_search_query() ) ); ?></h2>
 <form class="search-form" action="" method="get">
@@ -325,8 +331,12 @@ jQuery(document).ready( function($) {
 <div id="poststuff" class="meta-box-sortables">
 	<?php wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false ); ?>
 	<div id="gallerydiv" class="postbox <?php echo postbox_classes('gallerydiv', 'ngg-manage-gallery'); ?>" >
-        <div class="handlediv" title="<?php esc_attr_e('Click to toggle'); ?>"><br/></div>
-		<h3 class="hndl"><span><?php _e('Gallery settings', 'nggallery') ?><small> (<?php _e('Click here for more settings', 'nggallery') ?>)</small></span></h3>
+		<div class="handlediv" title="<?php esc_attr_e( 'Click to toggle' ); ?>">
+			<span class="toggle-indicator"></span>
+		</div>
+		<h3>
+			<span>&nbsp;<?php _e('Gallery settings', 'nggallery'); ?></span>
+		</h3>
 		<div class="inside">
 			<?php $controller->render_gallery_fields(); ?>
 

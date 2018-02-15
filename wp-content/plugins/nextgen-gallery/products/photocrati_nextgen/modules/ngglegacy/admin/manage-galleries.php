@@ -53,7 +53,7 @@ function nggallery_manage_gallery_main() {
 
 			// If a new gallery is added, refresh the page
 			Frame_Event_Publisher.listen_for('attach_to_post:new_gallery attach_to_post:manage_images attach_to_post:images_added',function(){
-				window.location.href = window.location.href;
+				window.location.href = window.location.href.toString();
 			});
 		}
 
@@ -170,7 +170,6 @@ function nggallery_manage_gallery_main() {
 	//-->
 	</script>
 	<div class="wrap">
-		<?php screen_icon( 'nextgen-gallery' ); ?>
 		<h2><?php echo _n( 'Manage Galleries', 'Manage Galleries', 2, 'nggallery'); ?></h2>
 		<form class="search-form" action="" method="get">
 		<p class="search-box">
@@ -180,7 +179,7 @@ function nggallery_manage_gallery_main() {
 			<input type="submit" value="<?php _e( 'Search Images', 'nggallery' ); ?>" class="button" />
 		</p>
 		</form>
-		<form id="editgalleries" class="nggform" method="POST" action="<?php echo $ngg->manage_page->base_page . '&amp;paged=' . esc_attr($_GET['paged']); ?>" accept-charset="utf-8">
+		<form id="editgalleries" class="nggform" method="POST" action="<?php echo nextgen_esc_url($ngg->manage_page->base_page . '&orderby=' . $orderby . '&order=' . $order . '&paged=' . $_GET['paged']); ?>" accept-charset="utf-8">
 		<?php wp_nonce_field('ngg_bulkgallery') ?>
 		<input type="hidden" name="page" value="manage-galleries" />
 
