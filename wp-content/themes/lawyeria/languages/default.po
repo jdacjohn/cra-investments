@@ -1,0 +1,728 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lawyeria\n"
+"POT-Creation-Date: 2014-07-20 19:10+0200\n"
+"PO-Revision-Date: 2014-07-20 19:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: ThemeIsle <friends@themeisle.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "404 Error"
+msgstr ""
+
+#: ../404.php:32
+msgid ""
+"Oops, I screwed up and you discovered my fatal flaw. Well, we're not all "
+"perfect, but we try.  Can you try this again or maybe visit our <a title="
+"\"themeIsle\" href=\""
+msgstr ""
+
+#: ../archive.php:17
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../archive.php:19
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../archive.php:21
+#, php-format
+msgid "Yearly Archives: %s."
+msgstr ""
+
+#: ../archive.php:23
+msgid "Category: "
+msgstr ""
+
+#: ../archive.php:25
+msgid "Author: "
+msgstr ""
+
+#: ../archive.php:64 ../attachment.php:27 ../front-page.php:254
+#: ../front-page.php:323 ../functions.php:443 ../functions.php:636
+#: ../index.php:49 ../page-blog.php:59 ../page-lawyers.php:32
+#: ../page-lawyers.php:68 ../page-testimonials.php:67 ../page.php:49
+#: ../search.php:49 ../single-lawyers.php:53 ../single.php:60
+#: ../taxonomy-practiceareas.php:73
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: ../comments.php:31 ../comments.php:43
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:32 ../comments.php:44
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:33 ../comments.php:45
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:55
+msgid "Comments are closed."
+msgstr ""
+
+#: ../front-page.php:24
+msgid "Lorem ipsum dolor sit amet, consectetur adipscing elit."
+msgstr ""
+
+#: ../front-page.php:33
+msgid ""
+"Ut fermentum aliquam neque, sit amet molestie orci porttitor sit amet. "
+"Mauris venenatis et tortor ut ultrices. Nam a neque venenatis, tristique "
+"lacus id, congue augue. In id tellus lacus. In porttitor sagittis tellus nec "
+"iaculis. Nunc sem odio, placerat a diam vel, varius."
+msgstr ""
+
+#: ../front-page.php:59
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and type setting industry."
+msgstr ""
+
+#: ../front-page.php:83
+msgid "Lorem"
+msgstr ""
+
+#: ../front-page.php:92 ../front-page.php:121 ../front-page.php:150
+msgid "Go to Appearance - Customize, to add content."
+msgstr ""
+
+#: ../front-page.php:112
+msgid "Ipsum"
+msgstr ""
+
+#: ../front-page.php:141
+msgid "Dolor"
+msgstr ""
+
+#: ../front-page.php:174
+msgid ""
+"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis."
+msgstr ""
+
+#: ../front-page.php:183
+msgid ""
+"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis "
+"bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. "
+"Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi "
+"accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. "
+"Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti "
+"sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+"Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a "
+"augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum "
+"fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris "
+"egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim."
+msgstr ""
+
+#: ../front-page.php:195 ../functions.php:350 ../functions.php:507
+#: ../functions.php:560 ../includes/customizer.php:266
+msgid "Practice Areas"
+msgstr ""
+
+#: ../front-page.php:220 ../functions.php:589 ../functions.php:661
+msgid "Our Lawyers"
+msgstr ""
+
+#: ../front-page.php:266
+msgid "What customers say"
+msgstr ""
+
+#: ../functions.php:48
+msgid "This menu will appear in header."
+msgstr ""
+
+#: ../functions.php:97
+msgid "General Sidebar"
+msgstr ""
+
+#: ../functions.php:98
+msgid ""
+"Use this sidebar to display widgets in your website, including posts and "
+"pages."
+msgstr ""
+
+#: ../functions.php:117
+msgid "Footer Sidebar"
+msgstr ""
+
+#: ../functions.php:118
+msgid "In this sidebar you cand add max. three widgets."
+msgstr ""
+
+#: ../functions.php:142
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:142
+msgid "(Edit)"
+msgstr ""
+
+#: ../functions.php:152
+#, php-format
+msgid "<span>%s</span>"
+msgstr ""
+
+#: ../functions.php:155
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:158
+msgid "Edit"
+msgstr ""
+
+#: ../functions.php:164
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:251 ../functions.php:383 ../functions.php:473
+msgid "Testimonials"
+msgstr ""
+
+#: ../functions.php:252
+msgid "Parent Testimonial:"
+msgstr ""
+
+#: ../functions.php:253
+msgid "All Testimonials"
+msgstr ""
+
+#: ../functions.php:254
+msgid "View Testimonial"
+msgstr ""
+
+#: ../functions.php:255 ../functions.php:256
+msgid "Add New Testimonial"
+msgstr ""
+
+#: ../functions.php:257
+msgid "Edit Testimonial"
+msgstr ""
+
+#: ../functions.php:258
+msgid "Update Testimonial"
+msgstr ""
+
+#: ../functions.php:259
+msgid "Search Testimonial"
+msgstr ""
+
+#: ../functions.php:260
+msgid "Not found Testimonial"
+msgstr ""
+
+#: ../functions.php:261
+msgid "Not found Testimonial in Trash"
+msgstr ""
+
+#: ../functions.php:264
+msgid "testimonials"
+msgstr ""
+
+#: ../functions.php:265
+msgid "Description for testimonials."
+msgstr ""
+
+#: ../functions.php:297
+msgid "Lawyers"
+msgstr ""
+
+#: ../functions.php:298
+msgid "Parent Lawyer:"
+msgstr ""
+
+#: ../functions.php:299
+msgid "All Lawyers"
+msgstr ""
+
+#: ../functions.php:300
+msgid "View Lawyer"
+msgstr ""
+
+#: ../functions.php:301 ../functions.php:302
+msgid "Add New Lawyer"
+msgstr ""
+
+#: ../functions.php:303
+msgid "Edit Lawyer"
+msgstr ""
+
+#: ../functions.php:304
+msgid "Update Lawyer"
+msgstr ""
+
+#: ../functions.php:305
+msgid "Search Lawyer"
+msgstr ""
+
+#: ../functions.php:306
+msgid "Not found Lawyer"
+msgstr ""
+
+#: ../functions.php:307
+msgid "Not found Lawyer in Trash"
+msgstr ""
+
+#: ../functions.php:310 ../taxonomy-practiceareas.php:42
+msgid "lawyers"
+msgstr ""
+
+#: ../functions.php:311
+msgid "Description for lawyers."
+msgstr ""
+
+#: ../functions.php:342
+msgid "Search Practice Areas"
+msgstr ""
+
+#: ../functions.php:343
+msgid "All Practice Areas"
+msgstr ""
+
+#: ../functions.php:344
+msgid "Parent Practice Area"
+msgstr ""
+
+#: ../functions.php:345
+msgid "Parent Practice Area:"
+msgstr ""
+
+#: ../functions.php:346
+msgid "Edit Practice Area"
+msgstr ""
+
+#: ../functions.php:347
+msgid "Update Practice Area"
+msgstr ""
+
+#: ../functions.php:348
+msgid "Add New Practice Area"
+msgstr ""
+
+#: ../functions.php:349
+msgid "New Practice Area"
+msgstr ""
+
+#: ../functions.php:379
+msgid "A widget that displays the latest testimonials."
+msgstr ""
+
+#: ../functions.php:473
+msgid "2"
+msgstr ""
+
+#: ../functions.php:477 ../functions.php:564 ../functions.php:665
+#: ../functions.php:738 ../functions.php:884
+msgid "Title:"
+msgstr ""
+
+#: ../functions.php:482
+msgid "Number of testimonials:"
+msgstr ""
+
+#: ../functions.php:503
+msgid "A widget that displays the Practice Areas."
+msgstr ""
+
+#: ../functions.php:585
+msgid "A widget that displays the latest lawyers."
+msgstr ""
+
+#: ../functions.php:661
+msgid "4"
+msgstr ""
+
+#: ../functions.php:670 ../includes/customizer.php:324
+msgid "Number of posts:"
+msgstr ""
+
+#: ../functions.php:691
+msgid "A widget that displays the \"about us\"."
+msgstr ""
+
+#: ../functions.php:695 ../functions.php:734
+msgid "About us"
+msgstr ""
+
+#: ../functions.php:734
+msgid "Lorem Ipsum description."
+msgstr ""
+
+#: ../functions.php:743
+msgid "Content:"
+msgstr ""
+
+#: ../functions.php:766
+msgid "A widget that displays the \"contact us\"."
+msgstr ""
+
+#: ../functions.php:770
+msgid "Contact Us"
+msgstr ""
+
+#: ../functions.php:870
+msgid "Contact"
+msgstr ""
+
+#: ../functions.php:871
+msgid "Romania, Bucuresti"
+msgstr ""
+
+#: ../functions.php:872
+msgid "Str. Lorem Ipsum, nr. 2"
+msgstr ""
+
+#: ../functions.php:873
+msgid "Tel: (+4) 0746123456"
+msgstr ""
+
+#: ../functions.php:874
+msgid "E-mail: office@themeisle.com"
+msgstr ""
+
+#: ../functions.php:875
+msgid "http://www.linkedin.com"
+msgstr ""
+
+#: ../functions.php:876
+msgid "http://www.twitter.com"
+msgstr ""
+
+#: ../functions.php:877
+msgid "http://www.facebook.com"
+msgstr ""
+
+#: ../functions.php:878
+msgid "http://www.google.com"
+msgstr ""
+
+#: ../functions.php:879
+msgid "http://www.vimeo.com"
+msgstr ""
+
+#: ../functions.php:889
+msgid "Address 1:"
+msgstr ""
+
+#: ../functions.php:894
+msgid "Address 2:"
+msgstr ""
+
+#: ../functions.php:899
+msgid "Telephone:"
+msgstr ""
+
+#: ../functions.php:904
+msgid "E-mail:"
+msgstr ""
+
+#: ../functions.php:909
+msgid "LinkedIn link:"
+msgstr ""
+
+#: ../functions.php:914
+msgid "Twitter link:"
+msgstr ""
+
+#: ../functions.php:919
+msgid "Facebook link:"
+msgstr ""
+
+#: ../functions.php:924
+msgid "Google+ link:"
+msgstr ""
+
+#: ../functions.php:929
+msgid "Vimeo link:"
+msgstr ""
+
+#: ../header.php:56
+msgid "+1-888-846-1732"
+msgstr ""
+
+#: ../index.php:12 ../single.php:12
+msgid "Blog"
+msgstr ""
+
+#: ../page-blog.php:54 ../page-blog.php:55
+msgid "Read More"
+msgstr ""
+
+#: ../page.php:36 ../single.php:44
+msgid "Pages:"
+msgstr ""
+
+#: ../single-lawyers.php:43
+msgid "Practice Areas:"
+msgstr ""
+
+#: ../taxonomy-practiceareas.php:16
+msgid "Practice Area"
+msgstr ""
+
+#: ../taxonomy-practiceareas.php:83
+msgid "See lawyers from other practice areas:"
+msgstr ""
+
+#: ../includes/customizer.php:13
+msgid "Header"
+msgstr ""
+
+#: ../includes/customizer.php:20
+msgid "Contact Title:"
+msgstr ""
+
+#: ../includes/customizer.php:29
+msgid "Contact telephone:"
+msgstr ""
+
+#: ../includes/customizer.php:39
+msgid "Front Page"
+msgstr ""
+
+#: ../includes/customizer.php:46
+msgid "Contact Form 7 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:55
+msgid "Contact Form 7 - Shortcode:"
+msgstr ""
+
+#: ../includes/customizer.php:66
+msgid "Subheader Title:"
+msgstr ""
+
+#: ../includes/customizer.php:75
+msgid "Subheader Content:"
+msgstr ""
+
+#: ../includes/customizer.php:86
+msgid "Quote Title:"
+msgstr ""
+
+#: ../includes/customizer.php:95
+msgid "Subheader Background:"
+msgstr ""
+
+#: ../includes/customizer.php:104
+msgid "Box (first) - Icon:"
+msgstr ""
+
+#: ../includes/customizer.php:113
+msgid "Box (first) - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:122
+msgid "Box (first) - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:133
+msgid "Box (two) - Icon:"
+msgstr ""
+
+#: ../includes/customizer.php:142
+msgid "Box (two) - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:151
+msgid "Box (two) - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:162
+msgid "Box (three) - Icon:"
+msgstr ""
+
+#: ../includes/customizer.php:171
+msgid "Box (three) - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:180
+msgid "Box (three) - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:191
+msgid "The Content - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:200
+msgid "The Content - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:209
+msgid "The Content - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:220
+msgid "Practice Areas - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:229
+msgid "Our Lawyers - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:238
+msgid "Testimonials - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:247
+msgid "Testimonials - Number of posts:"
+msgstr ""
+
+#: ../includes/customizer.php:256
+msgid "Testimonials - Offset:"
+msgstr ""
+
+#: ../includes/customizer.php:273
+msgid "Navigation Title:"
+msgstr ""
+
+#: ../includes/customizer.php:282
+msgid "The Content:"
+msgstr ""
+
+#: ../includes/customizer.php:293
+msgid "Categories Title:"
+msgstr ""
+
+#: ../includes/customizer.php:300
+msgid "Lawyer - Single Page"
+msgstr ""
+
+#: ../includes/customizer.php:307
+msgid "Lawyer Single - Categories:"
+msgstr ""
+
+#: ../includes/customizer.php:317
+msgid "Testimonials - Page"
+msgstr ""
+
+#: ../includes/customizer.php:334
+msgid "404 Page"
+msgstr ""
+
+#: ../includes/customizer.php:341
+msgid "404 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:350
+msgid "404 - Content"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:28
+msgid "Testimonials - Details"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:35
+msgid "Position"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:36
+#: ../includes/metaboxes/example-functions.php:42
+#: ../includes/metaboxes/example-functions.php:48
+#: ../includes/metaboxes/example-functions.php:66
+msgid "Description."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:41
+msgid "Company Name"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:47
+msgid "Company URL"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:57
+msgid "Testimonials - Settings"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:65
+msgid "Title"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:251
+msgid "Clear"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:252
+msgid "Default"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:253
+msgid "Select Color"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:254
+msgid "Current Color"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:1155
+msgid "Save"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_field.php:449
+msgid "Add Group"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_field.php:450
+msgid "Remove Group"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:249
+msgid "Add Row"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:305
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "Remove"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:600
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:634
+msgid "No terms"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:673
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:727
+msgid "Add or Upload File"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:694
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:757
+msgid "Remove Image"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "File:"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "Download"
+msgstr ""
